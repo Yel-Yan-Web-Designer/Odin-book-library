@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <h1>Library</h1>
+
+        <div class="signin-btn">
+            <button onclick="clearLibrary()">Clear Library</button>
+        </div>
+    </nav>
+
+    <main>
+        <button class="add-btn">+ Add Book</button>
+        <div class="modal hidden">
+            <div class="card">
+                <h3>Bookie</h3>
+                <form class="form">
+                    <div class="input-box">
+                        <label for="">Title</label>
+                        <input type="text" id="title" required>
+                        <span class="alert hidden">This book is already registered!</span>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Author</label>
+                        <input type="text" id="author" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="">Pages</label>
+                        <input type="number" id="pages">
+                    </div>
+                    <div class="input-box check">
+                        <label for="">Have you read it or not?</label>
+                        <input type="checkbox" id="checkbox">
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- book cards -->
+        <div class="book-container">
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
